@@ -1,4 +1,10 @@
 [versions]
+# Project configs
+minSdk = "21"
+targetSdk = "35"
+compileSdk = "35"
+versionCode = "2024122301"
+versionName = "1.0.0"
 agp = "8.7.3"
 kotlin = "2.0.0"
 coreKtx = "1.15.0"

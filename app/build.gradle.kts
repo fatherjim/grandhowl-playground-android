@@ -5,15 +5,14 @@ plugins {
 }
 
 android {
-    namespace = "com.archonbit.grandhowl"
-    compileSdk = 35
+    compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
         applicationId = "com.archonbit.grandhowl"
-        minSdk = 21
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = libs.versions.versionCode.get().toInt()
+        versionName = libs.versions.versionName.get()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -37,6 +36,7 @@ android {
     buildFeatures {
         compose = true
     }
+    namespace = "com.archonbit.grandhowl"
 }
 
 dependencies {
